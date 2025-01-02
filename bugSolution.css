@@ -1,0 +1,26 @@
+/* Correct usage of calc() */
+.element {
+  width: calc(100% - 10px);
+  height: calc(50vh - 20px);
+  margin: calc(1em + 10px);
+}
+
+/* Correcting errors */
+.element-fix {
+  /* Correct: Spaces around operators are crucial */
+  width: calc(100% - 10px); /*Corrected*/ 
+  /* Correct: using compatible units */
+  height: calc(50vh - 20px);/*Corrected*/
+  /* Correct: Avoid redundant nesting */
+  margin: calc(1em + 10px);/*Corrected*/
+}
+
+/*Avoid mixing incompatible units within a single calc()*/
+.element-fix-2 {
+  width: calc(50% - 10px); /* Using only percentage and pixels for better predictability */
+}
+
+/* Avoid unnecessary nesting of calc() functions*/
+.element-fix-3{
+  width: calc(50% - 10px); /* Simpler and more readable */
+} 
